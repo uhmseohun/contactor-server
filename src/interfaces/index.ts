@@ -1,4 +1,7 @@
+import { ObjectId } from 'mongodb';
+
 export interface User {
+  _id: ObjectId,
   username: string;
   password: string;
   name: string;
@@ -7,4 +10,5 @@ export interface User {
     street: string;
     detail: string;
   };
+  toJSON: Function;
 };

@@ -19,11 +19,10 @@ export const verify = async (token: string) => {
 
 export const issue = async (identity: User) => {
   const token = await jwt.sign(
-    identity,
+    identity.toJSON(),
     config.jwtSecret as string,
     {
       algorithm: 'HS512',
-      expiresIn: 0,
     },
   );
   return token;
