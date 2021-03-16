@@ -11,7 +11,7 @@ const userSchema = createSchema({
     street: Type.string({ required: true, trim: true }),
     detail: Type.string({ required: true, trim: true }),
   }),
-}, { versionKey: false, timestamps: true });
+}, { versionKey: true, timestamps: true });
 
 userSchema.pre('save', function (next) {
   if (this.isModified('password')) {
