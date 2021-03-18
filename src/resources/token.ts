@@ -5,7 +5,7 @@ import { HttpException } from '../exceptions';
 
 export const verify = async (token: string) => {
   try {
-    const { identity }: any = await jwt.verify(
+    const identity: any = await jwt.verify(
       token,
       config.jwtSecret as string,
     );

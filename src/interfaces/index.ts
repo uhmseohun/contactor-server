@@ -12,3 +12,22 @@ export interface User {
   };
   toJSON: Function;
 };
+
+export interface VaccineCenter {
+  address: string;
+  centerName: string;
+  centerType: string;
+  facilityName: string;
+  id: number;
+  lat: number;
+  lng: number;
+  org: string;
+  sido: string;
+  sigungu: string;
+  zipCode: string;
+};
+
+export interface Coordinate {
+  lat: number;
+  lng: number;
+};
